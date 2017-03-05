@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///H:/project/cloudDemo/config/src/main/resources/local-config
+
+server:
+  port: 8888
+
+#unencrypt
+security:
+  user:
+    password: aaa123321

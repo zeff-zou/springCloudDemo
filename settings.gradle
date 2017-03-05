@@ -1,0 +1,5 @@
+rootProject.name = 'cloudDemo'
+
+include  'registry','demo-service','demo-fegin','config','gateway','demo-fegin1'
+include  'common'
+

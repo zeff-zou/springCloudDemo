@@ -1,0 +1,19 @@
+#spring:
+#  application:
+#    name: demo-fegin
+#server:
+#  port: 3333
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:1111/eureka/
+spring:
+  application:
+    name: demo-fegin1
+  cloud:
+    config:
+      uri: http://localhost:8888
+      password: aaa123321
+      username: user
