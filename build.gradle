@@ -37,3 +37,10 @@ subprojects {
     }
 
 }
+//配置全局使用jdk1.8
+allprojects {
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
