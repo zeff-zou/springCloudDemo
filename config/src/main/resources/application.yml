@@ -7,7 +7,7 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///H:/project/cloudDemo/config/src/main/resources/local-config
+          search-locations: file:///D:/project/springCloudDemo/config/src/main/resources/local-config
 
 server:
   port: 8888
