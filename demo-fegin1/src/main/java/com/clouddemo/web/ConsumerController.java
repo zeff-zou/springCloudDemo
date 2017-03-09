@@ -1,6 +1,7 @@
 package com.clouddemo.web;
 
 
+import com.clouddemo.rabbit.Sender;
 import com.clouddemo.service.ComputeClient;
 import com.clouddemo.vo.RowData;
 import com.clouddemo.vo.SysUser;
@@ -29,6 +30,10 @@ import java.util.*;
 public class ConsumerController {
     @Autowired
     ComputeClient computeClient;
+
+    @Autowired
+    private Sender sender;
+
     @Value("${from}")
     private String from;
     private final Logger logger = Logger.getLogger(getClass());
@@ -112,5 +117,11 @@ public class ConsumerController {
         modelMap.put("success","success");
         response.setHeader("Access-Control-Allow-Origin", "*");
         return modelMap;
+    }
+
+    @RequestMapping("/RabbitMq")
+    public String index() {
+        sender.send();
+        return "Hello RabbitMq";
     }
 }
