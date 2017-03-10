@@ -1,6 +1,7 @@
 package com.clouddemo.web;
 
 
+import com.clouddemo.rabbit.Sender;
 import com.clouddemo.service.ComputeClient;
 import com.clouddemo.vo.SysUser;
 import org.apache.log4j.Logger;
@@ -28,6 +29,8 @@ import java.util.Map;
 public class ConsumerController {
     @Autowired
     ComputeClient computeClient;
+    @Autowired
+    Sender sender;
     @Value("${from}")
     private String from;
     private final Logger logger = Logger.getLogger(getClass());
@@ -65,5 +68,10 @@ public class ConsumerController {
         }
         modelMap.put("data" , sysUserList);
         return modelMap;
+    }
+    @RequestMapping(value = "/sendMq",method = RequestMethod.GET)
+    public String sendMq() {
+        sender.send();
+        return "success";
     }
 }

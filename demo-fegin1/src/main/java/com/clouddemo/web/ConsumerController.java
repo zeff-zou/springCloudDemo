@@ -119,9 +119,9 @@ public class ConsumerController {
         return modelMap;
     }
 
-    @RequestMapping("/RabbitMq")
-    public String index() {
+    @RequestMapping(value = "/sendMq",method = RequestMethod.GET)
+    public String sendMq() {
         sender.send();
-        return "Hello RabbitMq";
+        return "success";
     }
 }

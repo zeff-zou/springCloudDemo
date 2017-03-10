@@ -15,8 +15,8 @@ public class Sender {
     private AmqpTemplate rabbitTemplate;
 
     public void send() {
-        String context = "textRouting-1 " + new Date();
-        System.out.println("Sender-1 : " + context);
+        String context = "textRouting " + new Date();
+        System.out.println("Sender : " + context);
         this.rabbitTemplate.convertAndSend("textRouting", context);
     }
 }
