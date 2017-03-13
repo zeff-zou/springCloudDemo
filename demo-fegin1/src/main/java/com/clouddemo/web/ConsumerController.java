@@ -124,4 +124,9 @@ public class ConsumerController {
         sender.send();
         return "success";
     }
+    @RequestMapping(value = "/sendHello",method = RequestMethod.GET)
+    public String sendHello() {
+        sender.sendHello();
+        return "success";
+    }
 }

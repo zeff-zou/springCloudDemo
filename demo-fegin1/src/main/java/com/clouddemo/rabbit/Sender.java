@@ -19,4 +19,10 @@ public class Sender {
         System.out.println("Sender-1 : " + context);
         this.rabbitTemplate.convertAndSend("textRouting", context);
     }
+
+    public void sendHello() {
+        String context = "hello-1 " + new Date();
+        System.out.println("hello-1 : " + context);
+        this.rabbitTemplate.convertAndSend("hello", context);
+    }
 }
