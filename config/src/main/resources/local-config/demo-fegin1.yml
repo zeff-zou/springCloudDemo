@@ -1,0 +1,22 @@
+server:
+  port: 3332
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+spring:
+  application:
+    name: demo-fegin
+  cloud:
+    config:
+      uri: http://localhost:8888
+      password: aaa123321
+      username: user
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: zouzf
+#    password: zouzf
+from: git-default-1.0

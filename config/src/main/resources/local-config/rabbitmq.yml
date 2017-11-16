@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: rabbitmq
+server:
+  port: 5555
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: zouzf
+    password: zouzf

@@ -1,0 +1,29 @@
+server:
+  port: 3333
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+spring:
+  application:
+    name: demo-fegin
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: zouzf
+#    password: zouzf
+from: git-default-1.0
+
+
+security:
+  oauth2:
+    client:
+      client-id: client_1
+      client-secret:
+      grant_type: password
+      access-token-uri: http://localhost:8080/authentication/oauth/token
+      user-authorization-uri: http://localhost:8080/authentication/oauth/authorize
+    resource:
+      user-info-uri: http://localhost:8080/authentication/user
