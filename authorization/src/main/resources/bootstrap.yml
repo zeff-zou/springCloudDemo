@@ -1,0 +1,9 @@
+
+spring:
+  application:
+    name: authentication
+  cloud:
+    config:
+      uri: http://localhost:8888
+      password: aaa123321
+      username: user
