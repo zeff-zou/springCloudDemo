@@ -1,5 +1,5 @@
 rootProject.name = 'cloudDemo'
 
-include  'registry','demo-service','demo-service1','demo-fegin','config','gateway','demo-fegin1','rabbitmq'
+include  'registry','demo-service','demo-service1','demo-fegin','gateway','demo-fegin1','rabbitmq','authorization','config'
 include  'common'
 
